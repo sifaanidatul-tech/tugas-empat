@@ -1,0 +1,380 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Story 3 - Official Site Replica</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts for Toy Story Vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Panel Overlay -->
+    <div class="panel-overlay" id="panelOverlay" onclick="closeReadMore()"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="asset/logo.png" alt="Toy Story Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">ABOUT THE FILM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">FEATURE FILMS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#characters" onclick="document.getElementById('characters').scrollIntoView({behavior: 'smooth'})">CHARACTERS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#event" onclick="document.getElementById('event').scrollIntoView({behavior: 'smooth'})">EVENT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container h-100 d-flex align-items-center justify-content-center position-relative">
+            <div class="logo-container text-center">
+                <h1 class="display-1 toy-font text-warning">TOY STORY</h1>
+                <div class="number-3">3</div>
+            </div>
+            <img src="asset/3 karakter.png" alt="Hero Background" style="position:absolute; bottom:0; width:100%; opacity:0.8; z-index:1;">
+        </div>
+        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- About The Film Section -->
+    <section id="about" class="about-section d-flex flex-wrap">
+        <div class="col-md-6 about-image p-0">
+            <img src="asset/Toy Story 3.jpg" alt="Daycare Center" class="img-fluid w-100 h-100 object-fit-cover">
+        </div>
+        <div class="col-md-6 about-content d-flex flex-column justify-content-center p-5">
+            <h5 class="text-uppercase fw-bold mb-3">About The Film</h5>
+            <h2 class="mb-4">Look, everyone,<br>It's nice here, I admit. But we need to go home.</h2>
+            <p class="mb-4">Woody, Buzz and the whole gang are back. As their owner Andy prepares to depart for college, his loyal toys find themselves in daycare where untamed tots with their sticky little fingers do not play nice. So, it's all for one and one for all as they join Barbie's counterpart Ken, a thespian hedgehog named Mr. Pricklepants and a pink, strawberry-scented teddy bear called Lots-o'-Huggin' Bear to plan their great escape.</p>
+            
+            <button class="btn btn-custom rounded-pill px-4" onclick="openReadMore()">Read More</button>
+            
+            <div class="dots mt-4">
+                <span class="active" onclick="showAboutSlide(0)"></span>
+                <span onclick="showAboutSlide(1)"></span>
+                <span onclick="showAboutSlide(2)"></span>
+                <span onclick="showAboutSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Films / Video Section -->
+    <section id="features" class="video-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center mb-4">
+                    <div class="video-wrapper shadow-lg position-relative">
+                        <video src="asset/Toy Story 3 Clip.mp4" class="w-100" controls poster="c:\Users\user\Downloads\ba5a36fc729cf5b0f229973194d24a6c-removebg-preview.png"></video>
+                        <div class="play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mb-4">
+                <span class="red-ribbon">FEATURE FILMS</span>
+            </div>
+
+            <div class="row text-center feature-films-list">
+                <div class="col-md-4">
+                    <img src="asset/woody-removebg-preview (1).png" class="film-thumb rounded-circle mb-2" alt="TS1" onclick="alert('Playing Toy Story 1 Teaser...')">
+                    <h6>Toy Story 1 / Teaser</h6>
+                    <small>Run time: 01:45</small>
+                </div>
+                <div class="col-md-4">
+                    <img src="asset/karakter perempuan.png" class="film-thumb rounded-circle mb-2" alt="TS2" onclick="alert('Playing Toy Story 2 Trailer...')">
+                    <h6>Toy Story 2 / Trailer 1</h6>
+                    <small>Run time: 02:10</small>
+                </div>
+                <div class="col-md-4">
+                    <img src="asset/ba5a36fc729cf5b0f229973194d24a6c-removebg-preview.png" class="film-thumb rounded-circle mb-2" alt="TS3" onclick="alert('Playing Toy Story 3 Trailer...')">
+                    <h6>Toy Story 3 / Trailer 2</h6>
+                    <small>Run time: 02:30</small>
+                </div>
+            </div>
+        </div>
+        <img src="asset/woody-removebg-preview (1).png" class="woody-deco d-none d-md-block" alt="Woody">
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container d-flex align-items-center h-100">
+            <div class="row w-100">
+                <div class="col-md-8 offset-md-2 text-center text-white">
+                    <h3>"NOW YOU GOT A PROMISE TO TAKE GOOD CARE OF THESE GUYS. THEY MEAN A LOT TO ME."</h3>
+                </div>
+            </div>
+        </div>
+        <img src="asset/andy.png" class="andy-img" alt="Andy">
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="characters-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center position-relative">
+                    <img src="c:\Users\user\Downloads\536ffcd206a5897caf8cfd1ea38a69f8-removebg-preview.png" class="img-fluid character-main" alt="Woody Main">
+                    <div class="mini-char pos-1"><img src="asset/3042c22b861e8053553f6cb8c5cd0a0e-removebg-preview.png" width="50"></div>
+                    <div class="mini-char pos-2"><img src="asset/ba5a36fc729cf5b0f229973194d24a6c-removebg-preview.png" width="50"></div>
+                </div>
+                
+                <div class="col-md-7">
+                    <h5 class="text-muted text-uppercase">The Characters</h5>
+                    <div class="d-inline-block bg-danger text-white px-3 py-1 mb-3 fw-bold fs-4" style="transform: skew(-10deg);">WOODY</div>
+                    
+                    <p>Woody is a cowboy sheriff who presides over his signature cast of toys from the 1950s. To show Woody’s friendship every time he pulls string a pullstring, he's always been Andy's favorite toy. Even though his owner is now grown, the loyal sheriff Woody maintains a steadfast belief that Andy will care about his toys.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="char-card position-relative">
+                                <video src="asset/Toy Story 3 Clip.mp4" class="w-100 rounded" controls></video>
+                                <div class="play-overlay"><i class="fa-solid fa-play-circle"></i></div>
+                                <small class="d-block mt-1 text-muted">Run time: 01:45</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="char-card">
+                                <img src="asset/foto.jpg" class="w-100 rounded">
+                                <small class="d-block mt-1 text-muted">Gallery</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Carousel -->
+    <section id="gallery" class="gallery-section py-5 bg-light">
+        <div class="container-fluid p-0 position-relative">
+            <img src="asset/Toy Story 3.jpg" class="w-100 gallery-banner" alt="Gallery Banner">
+            
+            <div class="carousel-controls d-flex justify-content-center gap-3 position-absolute start-50 translate-middle-x" style="bottom: -30px;">
+                <div class="bg-white rounded-circle p-1 border"><img src="asset/karakter perempuan.png" width="40" class="rounded-circle" onclick="changeBanner(this.src)"></div>
+                <div class="bg-white rounded-circle p-1 border"><img src="asset/woody-removebg-preview (1).png" width="40" class="rounded-circle" onclick="changeBanner(this.src)"></div>
+                <div class="bg-white rounded-circle p-1 border"><img src="asset/ba5a36fc729cf5b0f229973194d24a6c-removebg-preview.png" width="40" class="rounded-circle" onclick="changeBanner(this.src)"></div>
+                <div class="bg-white rounded-circle p-1 border"><img src="asset/karakter perempuan.png" width="40" class="rounded-circle" onclick="changeBanner(this.src)"></div>
+                <div class="bg-white rounded-circle p-1 border"><img src="asset/woody-removebg-preview (1).png" width="40" class="rounded-circle" onclick="changeBanner(this.src)"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Event Section -->
+    <section id="event" class="event-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5 class="text-danger fw-bold">SPECIAL EVENT</h5>
+                    <h2 class="fw-bold mb-3">WRITE AND SHARE<br>YOUR MEMORY</h2>
+                    <p>Upload a video or photo and share your most precious memory with your loved toys.</p>
+                    
+                    <div class="write-memory-btn mt-4">
+                        <div class="circle-btn d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#memoryModal">
+                            <div class="text-center">
+                                <i class="fa-solid fa-plus fs-3"></i><br>
+                                <small class="fw-bold">WRITE<br>MEMORY</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <img src="asset/3042c22b861e8053553f6cb8c5cd0a0e-removebg-preview.png" class="img-fluid lotso-img" alt="Lotso">
+                    <img src="asset/ba5a36fc729cf5b0f229973194d24a6c-removebg-preview.png" class="img-fluid alien-img ms-n5" alt="Alien" style="width: 200px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container text-center">
+            <h6 class="fw-bold">Pixar Animation Studios</h6>
+            <p class="small text-muted">Located in Emeryville, California, Pixar Animation Studios has created animated features and short films for over 20 years.<br>Pixar is also home to the RenderMan line of software products.</p>
+            
+            <hr class="w-50 mx-auto my-4">
+            
+            <h6>Contact Us</h6>
+            <p class="small text-muted">Pixar Animation Studios, 1200 Park Avenue, Emeryville, California 94608<br>T: (510) 595-4000 F: (510) 595-4100</p>
+            
+            <div class="my-4">
+                <img src="asset/disney.png" height="30" alt="Disney Pixar">
+            </div>
+            
+            <p class="tiny-text">COPYRIGHT © Disney/Pixar. All rights reserved. Toy Story<br>Copyright &copy; 2026</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE PANEL FOR READ MORE -->
+    <div id="readMorePanel" class="slide-panel">
+        <div class="panel-header">
+            <h5 class="toy-font m-0">The Complete Journey</h5>
+            <button class="close-panel" onclick="closeReadMore()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="panel-content">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="c:\Users\user\Downloads\Toy Story 3.jpg" class="img-fluid rounded shadow w-100" alt="Synopsis Image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-3">From Attic to College</h2>
+                    <p>Woody, Buzz Lightyear, and the rest of the gang return in the highly anticipated third installment of the beloved Toy Story franchise. As Andy prepares to leave for college, the toys face an uncertain future.</p>
+                    <p>Accidentally donated to Sunnyside Daycare, the gang initially believes they've found a new paradise. However, they quickly discover that the facility is governed by the deceptively charming Lots-o'-Huggin' Bear (Lotso), whose strict rules and chaotic toddler section turn the dream into a nightmare.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h4 class="fw-bold text-primary mb-3">The Great Escape</h4>
+                    <p>Realizing they must return to Andy, Woody orchestrates a daring, multi-stage escape plan. Along the way, they are aided by new allies like Ken and Barbie, who undergo their own transformations of loyalty and love.</p>
+                    <p>The climax takes place in a gripping incinerator scene, testing the limits of friendship, before culminating in one of the most emotional and celebrated endings in animation history. The film explores profound themes of growing up, letting go, and the enduring power of childhood imagination.</p>
+                    <div class="mt-4 p-3 bg-light rounded border-start border-4 border-warning">
+                        <p class="fst-italic m-0">"To infinity and beyond!" - Buzz Lightyear</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-custom rounded-pill mt-4 px-4" onclick="closeReadMore()">Back to Home</button>
+        </div>
+    </div>
+
+    <!-- WRITE MEMORY MODAL -->
+    <div class="modal fade" id="memoryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: var(--ts-red);">
+                    <h5 class="modal-title toy-font">Share Your Memory</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="memoryForm">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Andy Davis">
+                        </div>
+                        <div class="mb-3">
+                            <label for="memoryText" class="form-label">Your Memory</label>
+                            <textarea class="form-control" id="memoryText" rows="3" placeholder="I'll never forget playing with Woody..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mediaUpload" class="form-label">Upload Photo/Video</label>
+                            <input class="form-control" type="file" id="mediaUpload">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" onclick="submitMemory()">Post Memory</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Video Play Button Logic
+        const videos = document.querySelectorAll("video");
+        videos.forEach((video) => {
+            const container = video.parentElement;
+            const btn = container.querySelector(".play-button, .play-overlay");
+            if (!btn) return;
+            const icon = btn.querySelector("i");
+            btn.addEventListener("click", function () {
+                if (video.paused) {
+                    video.play();
+                    if (icon) { icon.classList.remove("fa-play"); icon.classList.add("fa-pause"); }
+                } else {
+                    video.pause();
+                    if (icon) { icon.classList.remove("fa-pause"); icon.classList.add("fa-play"); }
+                }
+            });
+            video.addEventListener("click", function () { btn.click(); });
+        });
+
+        // Gallery Interaction
+        function changeBanner(src) {
+            const banner = document.querySelector('.gallery-banner');
+            banner.style.opacity = '0';
+            setTimeout(() => {
+                banner.src = src;
+                banner.style.opacity = '1';
+            }, 200);
+        }
+
+        // Submit Memory Logic
+        function submitMemory() {
+            const name = document.getElementById('userName').value;
+            const text = document.getElementById('memoryText').value;
+            if(name && text) {
+                alert(`Thanks ${name}! Your memory has been shared with the Toy Story community.`);
+                const modalEl = document.getElementById('memoryModal');
+                const modal = bootstrap.Modal.getInstance(modalEl);
+                modal.hide();
+                document.getElementById('memoryForm').reset();
+            } else {
+                alert("Please fill in your name and memory.");
+            }
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Read More Slide Panel Logic
+        function openReadMore() {
+            document.getElementById('readMorePanel').classList.add('active');
+            document.getElementById('panelOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeReadMore() {
+            document.getElementById('readMorePanel').classList.remove('active');
+            document.getElementById('panelOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close panel on Escape key
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape') closeReadMore();
+        });
+
+        // About Section Dots Logic
+        function showAboutSlide(index) {
+            document.querySelectorAll('.dots span').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
